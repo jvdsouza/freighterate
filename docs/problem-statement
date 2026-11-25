@@ -1,0 +1,112 @@
+# Hypothetical Context
+A Melbourne-based freight forwarding company with 45 employees that coordinates international imports and domestic deliveries for Australian businesses.
+
+The company does not necessarily own ships, aircraft or trucks. Instead, it coordinates transportation through third-party carriers, customs brokers and warehouse operators.
+
+Its responsibilities include:
+- Arranging transportation of goods.
+- Monitoring shipment progress.
+- Coordinating customs clearance.
+- Managing shipping documentation.
+- Organising final delivery.
+- Keeping customers informed.
+- Resolving operational problems.
+
+# Client Problem Statement — FreightOps
+
+We coordinate hundreds of shipments for our customers through multiple transportation providers.
+
+Each provider has different ways of communicating shipment information. Some provide tracking APIs, others send emails, and some require our employees to manually check their portals.
+
+Our operations team spends a significant amount of time checking whether shipments are progressing as expected, gathering information from different sources and updating our internal records.
+
+We often only discover problems when a customer contacts us or when a shipment misses an important deadline.
+
+When something goes wrong, our employees must investigate what happened, determine who is responsible and establish what needs to happen next.
+
+We would like a system that:
+
+- Gives us a reliable view of the current state of each shipment.
+- Automatically identifies shipments that require our attention.
+- Reduces the amount of manual investigation required to understand operational problems.
+- Helps our employees determine appropriate next actions.
+- Maintains a history of shipment events, decisions and resolutions.
+
+We want our employees to spend less time searching for information and more time resolving problems and supporting customers.
+
+We do not want to replace our existing transportation providers or freight booking systems.
+
+## What is a shipment?
+
+A shipment represents a consignment of goods being transported from an origin to a destination under an agreed transportation arrangement.
+
+A shipment might contain multiple packages, pallets or containers and may travel through multiple transportation legs.
+
+### Shipment Information
+Identification
+| Field	| Example |
+|---|---|
+| Shipment ID | SHP-1042 |
+| Customer reference | PO-8921 |
+| Carrier tracking number | TRK-78291 |
+| Booking reference | BKG-20261 |
+| Bill of lading reference | BOL-83912 |
+
+Different organisations may use different identifiers to refer to the same shipment. This introduces an interesting information-matching problem.
+
+Parties involved
+| Field | Example|
+| Customer | Australian furniture retailer|
+| Shipper | Chinese furniture manufacturer|
+| Consignee | Melbourne distribution centre|
+| Freight forwarder | Your hypothetical client|
+| Carrier | Ocean transportation provider|
+| Customs broker | Australian customs clearance provider |
+
+Cargo information
+| Field	| Example |
+| Description | Wooden furniture |
+| Package count | 12 |
+| Gross weight | 850 kg |
+| Volume | 4.2 m³ |
+| Packaging type | Pallets |
+| Commodity classification | HS code |
+| Dangerous goods | No |
+| Special handling requirements	| Keep dry |
+
+Transportation information
+Field	Example
+Origin	Shanghai, China
+Destination	Dandenong, Australia
+Transportation mode	Ocean and road
+Service level	Standard
+Planned departure	1 December
+Estimated arrival	18 December
+Required delivery date	22 December
+
+Operational state
+Field	Example
+Current status	Awaiting customs clearance
+Last known location	Port of Melbourne
+Actual departure	2 December
+Actual arrival	19 December
+Last tracking update	19 December, 14:30
+Expected next milestone	Customs cleared
+
+Documentation
+Document	Purpose
+Commercial invoice	Describes the commercial transaction
+Packing list	Describes the goods and packaging
+Bill of lading	Ocean transportation documentation
+Customs declaration	Supports customs clearance
+Certificate of origin	Establishes origin of goods where required
+Proof of delivery	Evidence of completed delivery
+
+Financial information
+Field	Example
+Quoted freight cost	AUD 2,400
+Actual freight cost	AUD 2,550
+Storage charges	AUD 150
+Customs duties	Applicable assessed amount
+Currency	AUD
+Invoice reference	INV-10921

@@ -2,7 +2,7 @@
 
 ## Overview
 
-FreightOps is an operational shipment monitoring and exception management platform designed for small to medium-sized logistics companies (15–150 employees), including freight forwarders, importers, exporters and delivery providers.
+FreightOps is an operational shipment monitoring and exception management platform designed for small to medium-sized logistics companies (15-150 employees), including freight forwarders, importers, exporters and delivery providers.
 
 The platform consolidates fragmented shipment information, detects operational discrepancies and uses automated AI workflows to investigate exceptions and recommend resolutions.
 
